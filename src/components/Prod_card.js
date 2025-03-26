@@ -1,4 +1,4 @@
-export function createCard(prod) {
+export function createCard(prod, onExpand) {
   const card = document.createElement("div");
   card.classList.add("product-card");
 
@@ -20,7 +20,7 @@ export function createCard(prod) {
             </div>
         </div>`;
 
-  const toggleBtn = card.querySelector(".toggle-btn");
+  const toggleBtn = card.querySelector(".card-container");
   const detailsDiv = card.querySelector(".product-details");
 
   // Click event to expand/collapse
