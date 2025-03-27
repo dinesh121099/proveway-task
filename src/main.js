@@ -1,5 +1,5 @@
 import data from "./data.js";
-import { createCard } from "./components/Prod_card.js"
+import { createCard } from "./components/Prod_card.js";
 
 // Get the container to append product cards
 const mainContainer = document.querySelector(".main");
