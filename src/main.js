@@ -7,16 +7,17 @@ const products = data();
 let expandedCard = null;
 
 const handleExpand = (selectedCard) => {
-  if (expandedCard && expandedCard !== selectedCard) {
+  if (expandedCard === selectedCard) {
+    expandedCard.collapse();
+    expandedCard = null;
+    return;
+  }
+  if (expandedCard) {
     expandedCard.collapse();
   }
-
-  if (expandedCard === selectedCard) {
-    expandedCard = null;
-  } else {
-    expandedCard = selectedCard;
-    expandedCard.expand();
-  }
+  
+  expandedCard = selectedCard;
+  expandedCard.expand();
 };
 
 products.forEach((ele) => {

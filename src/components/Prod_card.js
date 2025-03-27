@@ -57,7 +57,6 @@ export function createCard(prod, handleExpand) {
   toggle.addEventListener("click", () => {
     handleExpand(card);
     radioButton.checked = true;
-    card.expand();
   });
 
   card.expand = () => {
