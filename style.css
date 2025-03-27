@@ -1,10 +1,15 @@
+body{
+    margin: 0%;
+    font-family: 'Inter', sans-serif;
+}
 .bogo-text {
     font-size: 24px;
     text-align: center;
     position: relative;
     display: inline-block;
     color: #FF6B82;
-    padding: 10px 20px;
+    font-weight: 600;
+    padding: 15px 20px;
 }
 .bogo-text::before,
 .bogo-text::after {
@@ -19,8 +24,157 @@
 
 main{
     display: flex;
+    gap: 10px;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.main{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(217, 217, 217, 0.701);
+    width: 341px;
+    height: 90px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    align-items: center;
+
+}
+.flex-container{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 10px 10px 10px;
+}
+.btn-name-off{
+    display: flex;
+}
+.rad-btn{
+    accent-color: #FF6B82;
+    appearance: none;  /* Remove default styles */
+    width: 10px;
+    height: 10px;
+    border: 2px solid #555;
+    border-radius: 50%;  /* Make it circular */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.rad-btn:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #FF6B82; /* Change the dot color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.name{
+    font-weight: 550;
+    font-size: 16px;
+}
+.off{
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #FF6B82;
+    color: #ffffff;
+    letter-spacing: 0%;
+    border-radius: 2px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.off-price{
+    font-weight: 500;
+    font-size: 14px;
+}
+.actual-price{
+    font-weight: 400;
+    font-size: 10px;
+    text-decoration: line-through;
+    text-align: end;
+    color: #0000005f;
+}
+.product-details{
+    flex-direction: column;
+}
+.grid-container{
+    position: relative;
+    left: -30px;
+    top: 6px;
+    width: 200px;
+    font-weight: 400;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2px;
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+}
+select.grid-item{
+    font-size: 10px;
+    font-weight: 400;
+    width: 72px;
+    height: 25px;
+    border: 0.9px solid #D9D9D9;
+}
+
+.delivery-cont{
+    display: flex;
+    justify-content: space-between;
+    width: 341px;;
+}
+.free-delivery{
+    font-weight: 500;
+    font-size: 14px;
+    color: #FF6B82;
+    line-height: 100%;
+}
+.total{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+}
+.submit-btn{
+    width: 341px;
+    height: 40px;
+    background-color: #ff6B82;
+    border: 0;
+    border-radius: 4px;
+    padding: 10px;
+    gap: 8px;
+    cursor: pointer;
+}
+.foot{
+    margin: auto;
+    padding-top: 5px;
+    width: 342px;
+    text-align: right;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #0000006d;
 }
